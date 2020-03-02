@@ -10,8 +10,8 @@
     "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "keywords": [],
-  "author": "Keith Williams",
-  "email": "keith@webizly.com",
+  "author": "Donark Patel and Harsh Raythattha",
+  "email": "DP663@njit.edu",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
