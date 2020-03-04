@@ -1,6 +1,7 @@
 const Calculator = require('./Calculator');
 class Statistics extends Calculator {
 
+
     Variance(a,b) {
         return this.Difference(a,b);
     }
@@ -40,6 +41,12 @@ class Statistics extends Calculator {
             }
 
         return modes;
+    }
+    StandardDeviation (values) {
+        let meanValue = this.Mean(values);
+        return Math.sqrt(values.reduce(function (sq, n) {
+            return sq + Math.pow(n - meanValue, 2);
+        }, 0) / (values.length - 1));
     }
 
 }
