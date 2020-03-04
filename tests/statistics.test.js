@@ -15,6 +15,13 @@ test('calculating median', () => {
 
     expect(median).toBe(3);
 });
+test('calculating mode', () => {
+    let a = [3,5,4,4,1,1,2,3];
+    let Stat = new Statistics();
+    let mode = Stat.Mode(a);
+    expect.arrayContaining(1,3,4);
+    //expect(mode).arrayContaining([1,3,4]);
+});
 test('calculating variance', () => {
     let a = 1;
     let b = 2;
