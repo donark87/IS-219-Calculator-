@@ -30,3 +30,10 @@ test('calculating variance', () => {
 
     expect(variance).toBe(-1);
 });
+test('calculating standard deviation', () => {
+    let a = [1,2,3,4];
+    let Stat = new Statistics();
+    let standardDeviation = Stat.StandardDeviation(a);
+
+    expect(standardDeviation).toBe(1.2909944487358056);
+});
