@@ -9,10 +9,22 @@ class Statistics extends Calculator {
         let numValues = values.length;
         return this.Divide(sum,numValues);
     }
-    Median (arr) {
-        const mid = Math.floor(this.arr.length / 2),
-            nums = [...arr].sort((a, b) => a - b);
-        return this.arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+    Median(numbers) {
+
+        var median = 0, numsLen = numbers.length;
+        numbers.sort();
+
+        if (
+            numsLen % 2 === 0 // is even
+        ) {
+            // average of two middle numbers
+            median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2;
+        } else { // is odd
+            // middle number only
+            median = numbers[(numsLen - 1) / 2];
+        }
+
+        return median;
     }
 
 }

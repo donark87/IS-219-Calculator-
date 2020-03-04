@@ -8,6 +8,13 @@ test('calculating mean', () => {
 
     expect(mean).toBe(1.5);
 });
+test('calculating median', () => {
+    let a = [3,5,4,4,1,1,2,3];
+    let Stat = new Statistics();
+    let median = Stat.Median(a);
+
+    expect(median).toBe(3);
+});
 test('calculating variance', () => {
     let a = 1;
     let b = 2;
