@@ -59,6 +59,29 @@ class Statistics extends Calculator {
             return sorted[base];
         }
     }
+    Correlation (arr1, arr2, n){
+        let sum_X = 0;
+        let sum_Y = 0;
+        let sum_XY = 0;
+        let squareSum_X = 0;
+        let squareSum_Y = 0;
+
+        for (let i = 0; i < n; i++ ) {
+            sum_X  = sum_X + arr1[i];
+            sum_Y  = sum_Y + arr2[i];
+
+            sum_XY = sum_XY + arr1[i] * arr2[i];
+
+            squareSum_X = squareSum_X + arr1[i] * arr1[i];
+            squareSum_Y = squareSum_Y + arr2[i] * arr2[i];
+
+            let  corr = parseFloat((n * sum_XY - sum_X * sum_Y)/
+                parseFloat ((Math.sqrt((n * squareSum_X -
+                    sum_X * sum_X) * (n * squareSum_Y -
+                    sum_Y * sum_Y)))));
+            return corr;
+        }
+    }
 
 
 }

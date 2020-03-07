@@ -44,3 +44,12 @@ test('calculating Quantile', () => {
 
     expect(quantile).toBe(10);
 });
+test('calculating Correlation', () => {
+    let a = [15, 18, 21, 24, 27];
+    let b = [25, 25, 27, 31, 32];
+    let n = a.length;
+    let Stat = new Statistics();
+    let correlation = Stat.Correlation(a,b,n);
+
+    expect(correlation).toBe(1);
+});
