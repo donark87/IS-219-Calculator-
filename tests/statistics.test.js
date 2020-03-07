@@ -37,3 +37,10 @@ test('calculating standard deviation', () => {
 
     expect(standardDeviation).toBe(1.2909944487358056);
 });
+test('calculating Quantile', () => {
+    let a = [0, 10, 30];
+    let Stat = new Statistics();
+    let quantile = Stat.Quantile(a,0.5);
+
+    expect(quantile).toBe(10);
+});
