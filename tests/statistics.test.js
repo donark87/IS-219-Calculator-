@@ -53,3 +53,12 @@ test('calculating Correlation', () => {
 
     expect(correlation).toBe(1);
 });
+
+test('calculating Z-Score', () => {
+    let a = [10, 2, 38, 23, 38, 23, 21];
+    let Stat = new Statistics();
+    let zScore = Stat.Zscore(a,35);
+
+    expect(zScore).toBe(0.97);
+   //expect(zScore).toBeLessThan(-1);
+});

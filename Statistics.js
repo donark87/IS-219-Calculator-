@@ -82,6 +82,13 @@ class Statistics extends Calculator {
             return corr;
         }
     }
+    Zscore (values, x) {
+        let zScore = ((x - this.Mean(values))/ this.StandardDeviation(values));
+
+        return  parseFloat (zScore.toFixed(2));
+
+
+    }
 
 
 }
