@@ -89,6 +89,14 @@ class Statistics extends Calculator {
 
 
     }
+    MeanDeviation (values) {
+        let sumDeviation = 0;
+        let mean = this.Mean(values);
+        for (let x=0; x < values.length; x++){
+            sumDeviation += Math.abs( values[x] - mean);
+        }
+        return sumDeviation/values.length;
+    }
 
 
 }

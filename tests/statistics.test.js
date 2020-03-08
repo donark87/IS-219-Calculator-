@@ -60,5 +60,13 @@ test('calculating Z-Score', () => {
     let zScore = Stat.Zscore(a,35);
 
     expect(zScore).toBe(0.97);
-   //expect(zScore).toBeLessThan(-1);
+    //expect(zScore).toBeLessThan(-1);
+});
+test('calculating Mean Deviation', () => {
+    let a = [6, 7, 10, 12, 13, 4, 8, 12];
+    let Stat = new Statistics();
+    let meanDeviation = Stat.MeanDeviation(a);
+
+    expect(meanDeviation).toBe(2.75);
+
 });
