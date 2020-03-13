@@ -97,6 +97,19 @@ class Statistics extends Calculator {
         }
         return sumDeviation/values.length;
     }
+    Skewness (values) {
+        let skew = 0;
+        let hold =0;
+        let mean = this.Mean(values);
+        let StandardDev = this.StandardDeviation(values);
+        for(var i = 0; i<values.length; i++){
+            hold += Math.pow((values[i] - mean), 3);
+
+        }
+        skew = hold/ ((values.length - 1 ) * Math.pow(StandardDev, 3));
+        return parseFloat(skew.toFixed(4));
+
+    }
 
 
 }

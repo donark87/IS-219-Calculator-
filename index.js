@@ -1,22 +1,21 @@
 const Calculator = require('./MathOperations');
-const RandomGenerator = require('./RandomGenerator');
-
-
-let rand = new RandomGenerator(1,10);
-console.log(rand.GetRandomInt());
-
-console.log(rand.GetRandomIntWithSeed(1,10,5));
-/*
-const banana = require('./mean');
+const banana = require('./RandomGenerator');
 a = 1;
 b = 2;
 
 sum = Calculator.sum(a,b);
 product = Calculator.product(a,b);
 quotient = Calculator.quotient(a,b);
-mean = banana([1,2,3,4,5]);
 
 console.log("The sum is: " + sum);
 console.log("The product is: " + product);
 console.log("The quotient is: " + quotient);
-console.log("The mean is: " + mean);*/
+var min = 1;
+var max = 10;
+var seed = 6;
+var rand = new banana(min,max);
+var randomNumber = rand.GetRandomList(min,max, seed, 5);
+for( var i=0; i<5; i++){
+    console.log(randomNumber[i]);
+}
+var randItem = rand.getRandomItem

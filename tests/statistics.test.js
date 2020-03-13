@@ -70,3 +70,11 @@ test('calculating Mean Deviation', () => {
     expect(meanDeviation).toBe(2.75);
 
 });
+test('calculating Skew', () => {
+    let a = [2,2,4,5,6];
+    let Stat = new Statistics();
+    let meanDeviation = Stat.Skewness(a);
+
+    expect(meanDeviation).toBe(0.0314);
+
+});
