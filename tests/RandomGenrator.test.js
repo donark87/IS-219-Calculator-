@@ -53,3 +53,17 @@ test('generate N items from list', ()=>{
     expect(randomItems[1]).toBeGreaterThanOrEqual(1);
     expect(randomItems[2]).toBeGreaterThanOrEqual(1);
 });
+test('generate N items from list with seed', ()=>{
+    let aList = [1,2,3,4,5];
+    let N = 3;
+    let seed = 6;
+    let rand = new RandomGenerator(0,3);
+    let randomItems = rand.GetNItemsWithSeed(aList, N,seed);
+    expect(randomItems).toHaveLength(3);
+    expect(randomItems[0]).toBeLessThanOrEqual(5);
+    expect(randomItems[1]).toBeLessThanOrEqual(5);
+    expect(randomItems[2]).toBeLessThanOrEqual(5);
+    expect(randomItems[0]).toBeGreaterThanOrEqual(1);
+    expect(randomItems[1]).toBeGreaterThanOrEqual(1);
+    expect(randomItems[2]).toBeGreaterThanOrEqual(1);
+});

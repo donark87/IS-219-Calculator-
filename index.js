@@ -14,8 +14,10 @@ var min = 1;
 var max = 10;
 var seed = 6;
 var rand = new banana(min,max);
-var randomNumber = rand.GetRandomList(min,max, seed, 5);
-for( var i=0; i<5; i++){
-    console.log(randomNumber[i]);
+var aList = [1,2,3,4,5];
+var N = 3;
+console.log(Math.trunc(5/2));
+var randItem = rand.GetNItemsWithSeed(aList, N, seed);
+for( var i=0; i<3; i++){
+    console.log(randItem[i]);
 }
-var randItem = rand.getRandomItem

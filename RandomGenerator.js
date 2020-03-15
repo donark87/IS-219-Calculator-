@@ -54,7 +54,15 @@ class RandomGenerator  {
         return newList;
     }
     GetNItemsWithSeed(aList, N, seed){
-        
+        var x = aList.length;
+        var y = 0;
+        var newList = [];
+        var rand = new RandomGenerator(y,x);
+        for(var i=0; i<N; i++){
+            var randInt = rand.GetRandomIntWithSeed(y,x,seed);
+            newList[i] = aList[randInt];
+        }
+        return newList;
     }
 }
 
